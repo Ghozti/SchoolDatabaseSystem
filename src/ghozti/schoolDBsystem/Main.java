@@ -1,4 +1,4 @@
-package ghozti.vendingsim;
+package ghozti.schoolDBsystem;
 
 public class Main {
 
