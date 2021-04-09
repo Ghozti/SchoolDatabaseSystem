@@ -9,13 +9,15 @@ public class Schedule {
     private String studentName = scheduleStudent.getName();
     private String ID;
 
-    public Schedule(Student student){
+    public Schedule(Student student, String[] classes){
         scheduleStudent = student;
+        this.classes = classes;
     }
 
-    public Schedule(Student student, String ID){
+    public Schedule(Student student, String ID, String[] classes){
         scheduleStudent = student;
         this.ID = ID;
+        this.classes = classes;
     }
 
     public String[] getClasses(){
