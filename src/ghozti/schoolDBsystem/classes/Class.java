@@ -32,5 +32,20 @@ public class Class {
         return period;
     }
 
+    public int getClassSize(){
+        return students.size();
+    }
 
+    public void addStudent(Student student){
+        students.add(student);
+    }
+
+    public void removeStudent(int index){
+        students.remove(index);
+    }
+
+    //***OVERLOAD***
+    public void removeStudent(String name){
+        //TODO make an algorithm that removes a student by name
+    }
 }
