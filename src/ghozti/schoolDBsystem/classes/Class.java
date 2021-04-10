@@ -12,4 +12,25 @@ public class Class {
     private ArrayList<Student> students = new ArrayList<>();
     private int period;
 
+    public String getSubject(){
+        return subject;
+    }
+
+    public String getID(){
+        return ID;
+    }
+
+    public Teacher getClassTeacher(){
+        return classTeacher;
+    }
+
+    public ArrayList<Student> getStudents(){
+        return students;
+    }
+
+    public int getPeriod(){
+        return period;
+    }
+
+
 }
