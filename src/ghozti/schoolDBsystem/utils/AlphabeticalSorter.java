@@ -1,4 +1,4 @@
-package ghozti.schoolDBsystem.Utils;
+package ghozti.schoolDBsystem.utils;
 
 public class AlphabeticalSorter {
 }

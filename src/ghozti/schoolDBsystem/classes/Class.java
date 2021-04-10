@@ -6,40 +6,48 @@ import java.util.ArrayList;
 
 public class Class {
 
-    private String subject;
-    private String ID;
-    private Teacher classTeacher;
-    private ArrayList<Student> students = new ArrayList<>();
-    private int period;
+    private String subject;//class subject name
+    private String ID;//class ID ***TESTING***
+    private Teacher classTeacher;//name of class teacher
+    private ArrayList<Student> students = new ArrayList<>();//array list containing student objects
+    private int period;//class period number
 
-    public String getSubject(){
+
+    /***GETTERS***/
+    public String getSubject(){//returns class subjects string
         return subject;
     }
 
-    public String getID(){
+    public String getID(){//returns class ID string
         return ID;
     }
 
-    public Teacher getClassTeacher(){
+    public Teacher getClassTeacher(){//returns the teacher object
         return classTeacher;
     }
 
-    public ArrayList<Student> getStudents(){
+    public ArrayList<Student> getStudents(){//returns the student array list
         return students;
     }
 
-    public int getPeriod(){
+    public int getPeriod(){//returns the period int
         return period;
     }
 
-    public int getClassSize(){
+    public int getClassSize(){//returns class size (array list size)
         return students.size();
     }
 
-    public void addStudent(Student student){
+    //***STUDENT UTILS***/
+    public void addStudent(Student student){//allows to add a student to the list
         students.add(student);
     }
 
+    /**
+     * These 2 methods will be used to remove a student from the class
+     * the first method allows to remove a student using an index
+     * the second one allows to remove using the student name
+     */
     public void removeStudent(int index){
         students.remove(index);
     }
