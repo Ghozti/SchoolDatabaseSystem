@@ -22,4 +22,17 @@ public class Student {
     public int getGPA(){
         return GPA;
     }
+
+    public Student(String name,int age, String birthDate){
+        this.name = name;
+        this.age = age;
+        this.birthDate = birthDate;
+    }
+
+    public Student(String name,int age, String birthDate,int GPA){
+        this.name = name;
+        this.age = age;
+        this.birthDate = birthDate;
+        this.GPA = GPA;
+    }
 }
