@@ -22,4 +22,6 @@ public class Teacher {
     public String getSubject(){
         return subject;
     }
+
+    //TODO add constructor
 }
