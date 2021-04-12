@@ -29,6 +29,4 @@ public class Teacher {
         this.birthDate = birthDate;
         this.subject = subject;
     }
-
-    //TODO add constructor
 }

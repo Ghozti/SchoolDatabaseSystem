@@ -12,6 +12,20 @@ public class Class {
     private ArrayList<Student> students = new ArrayList<>();//array list containing student objects
     private int period;//class period number
 
+    public Class(String subject, String ID, Teacher teacher, int period){
+        this.subject = subject;
+        this.ID = ID;
+        this.classTeacher = teacher;
+        this.period = period;
+    }
+
+    public Class(String subject, String ID, Teacher teacher, int period, ArrayList<Student> studentList){
+        this.subject = subject;
+        this.ID = ID;
+        this.classTeacher = teacher;
+        this.period = period;
+        students = studentList;
+    }
 
     /***GETTERS***/
     public String getSubject(){//returns class subjects string

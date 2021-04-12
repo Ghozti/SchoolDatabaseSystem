@@ -23,8 +23,8 @@ public class Student {
         return GPA;
     }
 
-    public Student(char name,int age, String birthDate){
-        this.name = name + "";
+    public Student(String name,int age, String birthDate){
+        this.name = name;
         this.age = age;
         this.birthDate = birthDate;
     }
