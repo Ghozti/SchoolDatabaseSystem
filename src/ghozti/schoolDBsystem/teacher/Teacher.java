@@ -23,5 +23,12 @@ public class Teacher {
         return subject;
     }
 
+    public Teacher(String name, int age, String birthDate, String subject){
+        this.name = name;
+        this.age = age;
+        this.birthDate = birthDate;
+        this.subject = subject;
+    }
+
     //TODO add constructor
 }
