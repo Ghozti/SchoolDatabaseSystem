@@ -1,5 +1,6 @@
 package ghozti.schoolDBsystem.database;
 
+import ghozti.schoolDBsystem.classes.Class;
 import java.util.ArrayList;
 
 public class Classes {
