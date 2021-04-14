@@ -2,7 +2,6 @@ package ghozti.schoolDBsystem.UI;
 
 import ghozti.schoolDBsystem.classes.Class;
 import ghozti.schoolDBsystem.database.Classes;
-import ghozti.schoolDBsystem.database.Schedules;
 import ghozti.schoolDBsystem.database.Students;
 import ghozti.schoolDBsystem.database.Teachers;
 import ghozti.schoolDBsystem.student.Student;
