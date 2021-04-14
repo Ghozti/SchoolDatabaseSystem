@@ -6,9 +6,9 @@ import java.util.ArrayList;
 
 public class Teachers {
 
-    private ArrayList<Teacher> teachers = new ArrayList<>();
+    private static ArrayList<Teacher> teachers = new ArrayList<>();
 
-    public ArrayList<Teacher> getTeachers(){
+    public static ArrayList<Teacher> getTeachers(){
         return teachers;
     }
 }

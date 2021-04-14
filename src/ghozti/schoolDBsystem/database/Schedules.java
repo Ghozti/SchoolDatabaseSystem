@@ -5,9 +5,9 @@ import java.util.ArrayList;
 
 public class Schedules {
 
-    private ArrayList<Schedule> schedules = new ArrayList<>();
+    private static ArrayList<Schedule> schedules = new ArrayList<>();
 
-    public ArrayList<Schedule> getSchedules(){
+    public  static  ArrayList<Schedule> getSchedules(){
         return schedules;
     }
 }

@@ -3,6 +3,7 @@ package ghozti.schoolDBsystem.UI;
 import ghozti.schoolDBsystem.classes.Class;
 import ghozti.schoolDBsystem.database.Classes;
 import ghozti.schoolDBsystem.database.Schedules;
+import ghozti.schoolDBsystem.database.Teachers;
 import ghozti.schoolDBsystem.student.Student;
 import ghozti.schoolDBsystem.teacher.Teacher;
 
@@ -66,6 +67,8 @@ public class Options {
 
         System.out.println();//TODO add constant for subject
         subject = scanner.nextLine();
+
+        Teachers.getTeachers().add(new Teacher(name,age,birthDate,subject));
     }
 
     public void createStudent(){
