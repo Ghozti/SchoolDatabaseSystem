@@ -3,6 +3,7 @@ package ghozti.schoolDBsystem.UI;
 import ghozti.schoolDBsystem.classes.Class;
 import ghozti.schoolDBsystem.database.Classes;
 import ghozti.schoolDBsystem.database.Schedules;
+import ghozti.schoolDBsystem.database.Students;
 import ghozti.schoolDBsystem.database.Teachers;
 import ghozti.schoolDBsystem.student.Student;
 import ghozti.schoolDBsystem.teacher.Teacher;
@@ -91,6 +92,6 @@ public class Options {
 
         //TODO add an option where you can input the GPA
 
-
+        Students.getStudents().add(new Student(name,age,bday));
     }
 }

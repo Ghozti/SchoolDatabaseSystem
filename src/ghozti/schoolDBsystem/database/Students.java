@@ -7,7 +7,7 @@ public class Students {
 
     private static ArrayList<Student> students = new ArrayList<>();
 
-    public ArrayList<Student> getStudents(){
+    public static  ArrayList<Student> getStudents(){
         return students;
     }
 }
