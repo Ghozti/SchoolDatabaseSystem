@@ -5,7 +5,7 @@ public class Student {
     private String name;//name of student
     private int age;//age of student
     private String birthDate;//birthdate of student
-    private int GPA;//GPA of student
+    private double GPA;//GPA of student
 
     //constructor #1 will allow the user to set the fields except GPA
     public Student(String name,int age, String birthDate){
@@ -15,7 +15,7 @@ public class Student {
     }
 
     //constructor #2 will allow the user to set all fields
-    public Student(String name,int age, String birthDate,int GPA){
+    public Student(String name,int age, String birthDate,double GPA){
         this.name = name;
         this.age = age;
         this.birthDate = birthDate;
@@ -38,7 +38,7 @@ public class Student {
     }
 
     //GPA getter
-    public int getGPA(){
+    public double getGPA(){
         return GPA;
     }
 }

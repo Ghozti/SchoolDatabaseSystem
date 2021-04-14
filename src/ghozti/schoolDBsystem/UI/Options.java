@@ -73,5 +73,24 @@ public class Options {
 
     public void createStudent(){
 
+        Scanner scanner = new Scanner(System.in);
+
+        String name;
+        int age;
+        String bday;
+        double GPA;
+
+        System.out.println();//TODO add a constant for the name
+        name = scanner.nextLine();
+
+        System.out.println();//TODO add a constant for the age
+        age = scanner.nextInt();
+
+        System.out.println();//TODO add a constant for the bday
+        bday = scanner.nextLine();
+
+        //TODO add an option where you can input the GPA
+
+
     }
 }
