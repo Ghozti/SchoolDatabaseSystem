@@ -3,7 +3,6 @@ package ghozti.schoolDBsystem;
 import ghozti.schoolDBsystem.student.Student;
 import ghozti.schoolDBsystem.utils.AlphabeticalSorter;
 import ghozti.schoolDBsystem.utils.RemoveByName;
-
 import java.util.ArrayList;
 
 public class Main {

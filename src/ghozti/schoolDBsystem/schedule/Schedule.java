@@ -4,7 +4,7 @@ import ghozti.schoolDBsystem.student.Student;
 
 public class Schedule {
 
-    private String[] classes = new String[7];
+    private String[] classes;
     private Student scheduleStudent;
     private String studentName = scheduleStudent.getName();
     private String ID;

@@ -5,9 +5,9 @@ import java.util.ArrayList;
 
 public class Classes {
 
-    private ArrayList<Class> classes = new ArrayList<>();
+    private static ArrayList<Class> classes = new ArrayList<>();
 
-    public ArrayList<Class> getClasses(){
+    public static ArrayList<Class> getClasses(){
         return classes;
     }
 }
