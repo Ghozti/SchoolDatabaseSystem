@@ -36,3 +36,4 @@ public class Schedule {
         return ID;
     }
 }
+//TODO make the Student class hold an object for schedule and delete the student object here

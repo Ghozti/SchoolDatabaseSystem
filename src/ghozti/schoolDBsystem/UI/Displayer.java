@@ -22,10 +22,20 @@ public class Displayer {
     }
 
     public void displaySchedule(Schedule schedule){
-
+        System.out.println("[Classes] ");
+        for (String i : schedule.getClasses()){
+            System.out.println(i);
+        }
+        System.out.println("[ID] ".concat(schedule.getID()));
     }
 
     public void displayClass(Class clas$){
-
+        System.out.println("[Subject] ".concat(clas$.getSubject()));
+        System.out.println("[ID] ".concat(clas$.getID()));
+        System.out.println("[Class Teacher] ".concat(clas$.getClassTeacher().getName()));
+        System.out.println("[Students] ");
+        for (int i = 0; i < clas$.getClassSize(); i++) System.out.println(clas$.getStudents().get(i));
+        System.out.println("[Period] ".concat(Integer.toString(clas$.getPeriod())));
+        System.out.println("[Class size] ".concat(Integer.toString(clas$.getClassSize())));
     }
 }
