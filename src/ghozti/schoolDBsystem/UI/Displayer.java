@@ -15,7 +15,10 @@ public class Displayer {
     }
 
     public void displayTeacher(Teacher teacher){
-
+        System.out.println("[Name] ".concat(teacher.getName()));
+        System.out.println("[Age] ".concat(Integer.toString(teacher.getAge())));
+        System.out.println("[Birthdate] ".concat(teacher.getBirthDate()));
+        System.out.println("[Subject] ".concat(teacher.getSubject()));
     }
 
     public void displaySchedule(Schedule schedule){
