@@ -1,25 +1,37 @@
 package ghozti.schoolDBsystem.UI;
 
 import ghozti.schoolDBsystem.classes.Class;
-import ghozti.schoolDBsystem.schedule.Schedule;
 import ghozti.schoolDBsystem.student.Student;
 import ghozti.schoolDBsystem.teacher.Teacher;
 
+import java.util.ArrayList;
+
 public class GetFromDatabase {
 
-    public Student getByName(){
-
+    public Student getByNameS(ArrayList<Student> studentArrayList, String target){
+        for (int i = 0; i < studentArrayList.size(); i++) {
+            if (target.equals(studentArrayList.get(i).getName())){
+                return studentArrayList.get(i);
+            }
+        }
+        return null;
     }
 
-    public Teacher getByName(){
-
+    public Teacher getByNameT(ArrayList<Teacher> teacherArrayList, String target){
+        for (int i = 0; i < teacherArrayList.size(); i++) {
+            if (target.equals(teacherArrayList.get(i).getName())){
+                return teacherArrayList.get(i);
+            }
+        }
+        return null;
     }
 
-    public Schedule getByName(){
-
-    }
-
-    public Class getByName(){
-
+    public Class getByNameC(ArrayList<Class> classArrayList, String target){
+        for (int i = 0; i < classArrayList.size(); i++) {
+            if (target.equals(classArrayList.get(i).getSubject())){
+                return classArrayList.get(i);
+            }
+        }
+        return null;
     }
 }
