@@ -1,7 +1,6 @@
 package ghozti.schoolDBsystem.utils;
 
 import ghozti.schoolDBsystem.classes.Class;
-import ghozti.schoolDBsystem.schedule.Schedule;
 import ghozti.schoolDBsystem.student.Student;
 import ghozti.schoolDBsystem.teacher.Teacher;
 import java.util.ArrayList;
