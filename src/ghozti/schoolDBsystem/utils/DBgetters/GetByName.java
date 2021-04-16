@@ -1,4 +1,4 @@
-package ghozti.schoolDBsystem.utils;
+package ghozti.schoolDBsystem.utils.DBgetters;
 
 import ghozti.schoolDBsystem.classes.Class;
 import ghozti.schoolDBsystem.student.Student;
