@@ -26,15 +26,6 @@ public class RemoveByName {
         }
     }
 
-    public void removeByNameSC(ArrayList<Schedule> list, String target){
-        for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).getID().equals(target)){
-                list.remove(i);
-                return;
-            }
-        }
-    }
-
     public void removeByNameC(ArrayList<Class> list, String target){
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).getID().equals(target)){
