@@ -31,7 +31,7 @@ public class Main {
 
         System.out.println("***");
 
-        removeByName.removeByName(list,"yesi");
+        removeByName.removeByNameS(list,"yesi");
 
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i).getName());
