@@ -68,7 +68,7 @@ public class Options {
         System.out.println();//TODO add constant for subject
         subject = scanner.nextLine();
 
-        Teachers.getTeachers().add(new Teacher(name,age,birthDate,subject));
+        //Teachers.getTeachers().add(new Teacher(name,age,birthDate,subject));//TODO get ID
     }
 
     public void createStudent(){
@@ -91,6 +91,6 @@ public class Options {
 
         //TODO add an option where you can input the GPA
 
-        Students.getStudents().add(new Student(name,age,bday));
+        //Students.getStudents().add(new Student(name,age,bday));TODO get ID
     }
 }
