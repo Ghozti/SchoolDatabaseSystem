@@ -13,6 +13,7 @@ public class Student {
         this.name = name;
         this.age = age;
         this.birthDate = birthDate;
+        this.ID = ID;
     }
 
     //constructor #2 will allow the user to set all fields
@@ -20,6 +21,7 @@ public class Student {
         this.name = name;
         this.age = age;
         this.birthDate = birthDate;
+        this.ID = ID;
         this.GPA = GPA;
     }
 
@@ -37,6 +39,9 @@ public class Student {
     public String getBirthDate(){
         return birthDate;
     }
+
+    //ID getter
+    public String getID(){return ID;}
 
     //GPA getter
     public double getGPA(){
