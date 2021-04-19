@@ -1,13 +1,13 @@
 package ghozti.schoolDBsystem.UI;
 
 import ghozti.schoolDBsystem.classes.Class;
+import ghozti.schoolDBsystem.constants.Constants;
 import ghozti.schoolDBsystem.database.Classes;
 import ghozti.schoolDBsystem.database.Students;
 import ghozti.schoolDBsystem.database.Teachers;
 import ghozti.schoolDBsystem.student.Student;
 import ghozti.schoolDBsystem.teacher.Teacher;
 import ghozti.schoolDBsystem.utils.IDmaker.IDmaker;
-
 import java.util.Scanner;
 
 public class Options {
@@ -22,15 +22,15 @@ public class Options {
         Teacher teacher = null;
         int period;
 
-        System.out.println();//TODO add dialogue constants (class name)
+        System.out.println(Constants.Dialouge.setClassName);
         classname = scanner.nextLine();//sets the class name
 
         //TODO call the create teacher function
 
-        System.out.println();//TODO add dialogue constants (period)
+        System.out.println(Constants.Dialouge.setClassPeriod);
         period = scanner.nextInt();//sets class period
 
-        System.out.println();//TODO add constant for ID generated
+        System.out.println(Constants.Dialouge.generatingID);
         ID = iDmaker.idGenerator();
         System.out.println("[ID] ".concat(ID));
 
@@ -60,19 +60,19 @@ public class Options {
         String birthDate;
         String subject;
 
-        System.out.println();//TODO add a constant for the name
+        System.out.println(Constants.Dialouge.setname);
         name = scanner.nextLine();
 
-        System.out.println();//TODO add a constant for age
+        System.out.println(Constants.Dialouge.setAge);
         age = scanner.nextInt();
 
-        System.out.println();//TODO add constant for bday
+        System.out.println(Constants.Dialouge.setBday);
         birthDate = scanner.nextLine();
 
-        System.out.println();//TODO add constant for subject
+        System.out.println(Constants.Dialouge.setSubject);
         subject = scanner.nextLine();
 
-        System.out.println();//TODO add constant for ID generated
+        System.out.println(Constants.Dialouge.generatingID);
         var ID = iDmaker.idGenerator();
         System.out.println("[ID] ".concat(ID));
 
@@ -89,16 +89,16 @@ public class Options {
         String bday;
         double GPA;
 
-        System.out.println();//TODO add a constant for the name
+        System.out.println(Constants.Dialouge.setname);
         name = scanner.nextLine();
 
-        System.out.println();//TODO add a constant for the age
+        System.out.println(Constants.Dialouge.setAge);
         age = scanner.nextInt();
 
-        System.out.println();//TODO add a constant for the bday
+        System.out.println(Constants.Dialouge.setBday);
         bday = scanner.nextLine();
 
-        System.out.println();//TODO add constant for ID generated
+        System.out.println(Constants.Dialouge.generatingID);
         var ID = iDmaker.idGenerator();
         System.out.println("[ID] ".concat(ID));
         //TODO add an option where you can input the GPA
