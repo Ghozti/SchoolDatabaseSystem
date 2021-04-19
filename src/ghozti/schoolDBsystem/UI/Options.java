@@ -16,7 +16,6 @@ public class Options {
 
         Scanner scanner = new Scanner(System.in);
         IDmaker iDmaker = new IDmaker();
-
         String classname;
         String ID;
         Teacher teacher = null;
@@ -76,7 +75,7 @@ public class Options {
         var ID = iDmaker.idGenerator();
         System.out.println("[ID] ".concat(ID));
 
-        Teachers.getTeachers().add(new Teacher(name,age,birthDate,subject,ID));//TODO get ID
+        Teachers.getTeachers().add(new Teacher(name,age,birthDate,subject,ID));
     }
 
     public void createStudent(){
@@ -101,8 +100,13 @@ public class Options {
         System.out.println(Constants.Dialouge.generatingID);
         var ID = iDmaker.idGenerator();
         System.out.println("[ID] ".concat(ID));
-        //TODO add an option where you can input the GPA
 
-        Students.getStudents().add(new Student(name,age,bday,ID));
+        System.out.println("Would you like to input a GPA? \n [1] Yes \n [2] no");
+        if(scanner.nextInt() == 1){
+            System.out.println("Enter a GPA: ");
+            Students.getStudents().add(new Student(name, age, bday, ID,scanner.nextDouble()));
+        }else {
+            Students.getStudents().add(new Student(name, age, bday, ID));
+        }
     }
 }
