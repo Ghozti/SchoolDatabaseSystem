@@ -38,7 +38,7 @@ public class Options {
 
             Classes.getClasses().add(new Class(classname, ID, teacher, period));
         }catch (InputMismatchException e){
-            System.out.println("***INVALID INPUT***");
+            System.out.println(Constants.Errors.inputError);
         }
     }
 
@@ -83,7 +83,7 @@ public class Options {
 
             Teachers.getTeachers().add(new Teacher(name, age, birthDate, subject, ID));
         }catch (InputMismatchException e){
-            System.out.println();
+            System.out.println(Constants.Errors.inputError);
         }
     }
 
@@ -97,25 +97,29 @@ public class Options {
         String bday;
         double GPA;
 
-        System.out.println(Constants.Dialouge.setname);
-        name = scanner.nextLine();
+        try {
+            System.out.println(Constants.Dialouge.setname);
+            name = scanner.nextLine();
 
-        System.out.println(Constants.Dialouge.setAge);
-        age = scanner.nextInt();
+            System.out.println(Constants.Dialouge.setAge);
+            age = scanner.nextInt();
 
-        System.out.println(Constants.Dialouge.setBday);
-        bday = scanner.nextLine();
+            System.out.println(Constants.Dialouge.setBday);
+            bday = scanner.nextLine();
 
-        System.out.println(Constants.Dialouge.generatingID);
-        var ID = iDmaker.idGenerator();
-        System.out.println("[ID] ".concat(ID));
+            System.out.println(Constants.Dialouge.generatingID);
+            var ID = iDmaker.idGenerator();
+            System.out.println("[ID] ".concat(ID));
 
-        System.out.println("Would you like to input a GPA? \n [1] Yes \n [2] no");
-        if(scanner.nextInt() == 1){
-            System.out.println("Enter a GPA: ");
-            Students.getStudents().add(new Student(name, age, bday, ID,scanner.nextDouble()));
-        }else {
-            Students.getStudents().add(new Student(name, age, bday, ID));
+            System.out.println("Would you like to input a GPA? \n [1] Yes \n [2] no");
+            if (scanner.nextInt() == 1) {
+                System.out.println("Enter a GPA: ");
+                Students.getStudents().add(new Student(name, age, bday, ID, scanner.nextDouble()));
+            } else {
+                Students.getStudents().add(new Student(name, age, bday, ID));
+            }
+        }catch (InputMismatchException e){
+            System.out.println(Constants.Errors.inputError);
         }
     }
 }
