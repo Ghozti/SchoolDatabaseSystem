@@ -16,4 +16,8 @@ public class Constants {
     public static class Values extends Constants{
 
     }
+
+    public static class errors extends Constants{
+        public static final String inputError = "***INVALID INPUT***";
+    }
 }
