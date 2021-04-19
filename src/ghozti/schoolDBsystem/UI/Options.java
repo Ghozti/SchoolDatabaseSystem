@@ -34,7 +34,6 @@ public class Options {
         System.out.println("[ID] ".concat(ID));
 
         Classes.getClasses().add(new Class(classname,ID,teacher,period));
-        //TODO add an option that allows to add a list
     }
 
     public void createSchedule(){
