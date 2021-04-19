@@ -11,6 +11,7 @@ public class Constants {
         public static final String setAge = "Enter an age: ";
         public static final String setClassName = "Enter a class name: ";
         public static final String setClassPeriod = "Enter a class period: ";
+        public static final String addedToDB = "Added to database";
     }
 
     public static class Values extends Constants{

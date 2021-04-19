@@ -8,7 +8,6 @@ import ghozti.schoolDBsystem.database.Teachers;
 import ghozti.schoolDBsystem.student.Student;
 import ghozti.schoolDBsystem.teacher.Teacher;
 import ghozti.schoolDBsystem.utils.IDmaker.IDmaker;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -37,6 +36,7 @@ public class Options {
             System.out.println("[ID] ".concat(ID));
 
             Classes.getClasses().add(new Class(classname, ID, teacher, period));
+            System.out.println(Constants.Dialouge.addedToDB);
         }catch (InputMismatchException e){
             System.out.println(Constants.Errors.inputError);
         }
@@ -82,6 +82,7 @@ public class Options {
             System.out.println("[ID] ".concat(ID));
 
             Teachers.getTeachers().add(new Teacher(name, age, birthDate, subject, ID));
+            System.out.println(Constants.Dialouge.addedToDB);
         }catch (InputMismatchException e){
             System.out.println(Constants.Errors.inputError);
         }
@@ -118,6 +119,7 @@ public class Options {
             } else {
                 Students.getStudents().add(new Student(name, age, bday, ID));
             }
+            System.out.println(Constants.Dialouge.addedToDB);
         }catch (InputMismatchException e){
             System.out.println(Constants.Errors.inputError);
         }
