@@ -2,7 +2,6 @@ package ghozti.schoolDBsystem.utils.algorithms;
 
 import ghozti.schoolDBsystem.student.Student;
 import ghozti.schoolDBsystem.teacher.Teacher;
-
 import java.util.ArrayList;
 
 public class AlphabeticalSorter {

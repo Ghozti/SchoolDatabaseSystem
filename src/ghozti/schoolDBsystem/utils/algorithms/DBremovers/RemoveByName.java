@@ -1,4 +1,4 @@
-package ghozti.schoolDBsystem.utils.DBremovers;
+package ghozti.schoolDBsystem.utils.algorithms.DBremovers;
 
 import ghozti.schoolDBsystem.classes.Class;
 import ghozti.schoolDBsystem.student.Student;
