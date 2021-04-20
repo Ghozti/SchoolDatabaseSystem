@@ -6,13 +6,16 @@ import java.util.ArrayList;
 
 public class SortClasses {
 
-    public ArrayList<Classes> sort(){
+    public ArrayList<Class> sort(){
+
         ArrayList<Class> ela = new ArrayList<>();
         ArrayList<Class> math = new ArrayList<>();
         ArrayList<Class> history = new ArrayList<>();
         ArrayList<Class> science = new ArrayList<>();
         ArrayList<Class> cs = new ArrayList<>();
         ArrayList<Class> gym = new ArrayList<>();
+
+        ArrayList<Class> finalList = new ArrayList<>();
 
         for (int i = 0; i < Classes.getClasses().size(); i++){
             if (Classes.getClasses().get(i).getSubject().toLowerCase().equals("ela")){
@@ -29,5 +32,14 @@ public class SortClasses {
                 gym.add(Classes.getClasses().get(i));
             }
         }
+
+        finalList.addAll(ela);
+        finalList.addAll(math);
+        finalList.addAll(history);
+        finalList.addAll(science);
+        finalList.addAll(cs);
+        finalList.addAll(gym);
+
+        return finalList;
     }
 }
