@@ -98,7 +98,6 @@ public class Options {
         String name;
         int age;
         String bday;
-        double GPA;
 
         try {
             System.out.println(Constants.Dialouge.setname);
@@ -111,8 +110,9 @@ public class Options {
             bday = scanner.nextLine();
 
             System.out.println(Constants.Dialouge.generatingID);
-            var ID = iDmaker.idGenerator();
+            String ID = iDmaker.idGenerator();
             System.out.println("[ID] ".concat(ID));
+            //TODO fix the issue where i can't input bday
 
             System.out.println("Would you like to input a GPA? \n [1] Yes \n [2] no");
             if (scanner.nextInt() == 1) {
@@ -131,13 +131,17 @@ public class Options {
         Scanner scanner = new Scanner(System.in);
         AlphabeticalSorter alphabeticalSorter = new AlphabeticalSorter();
 
-        System.out.println(Constants.Dialouge.sortAlphabetically.concat("[1] yes\n [2] no"));
+        System.out.println(Constants.Dialouge.sortAlphabetically.concat("\n [1] yes\n [2] no"));
         try {
             if (scanner.nextInt() == 1){
-                System.out.println(alphabeticalSorter.sort(Students.getStudents()));
+                for (int i = 0; i < Students.getStudents().size(); i++){
+                    System.out.println(alphabeticalSorter.sort(Students.getStudents()).get(i).getName());
+                }
             }else {
-                System.out.println(Students.getStudents());
-            }
+                for (Student i : Students.getStudents()){
+                    System.out.println(i.getName());
+                }
+            }//TODO add a "print full details" option
         }catch (InputMismatchException e){
 
         }

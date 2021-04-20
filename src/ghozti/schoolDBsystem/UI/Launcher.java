@@ -31,6 +31,20 @@ public class Launcher {
                 options.createStudent();
                 break;
             case 5:
+                System.out.println(" [1] Print students\n [2] Print Teachers\n [3] Print classes \n [4] Print schedules");
+                switch (scanner.nextInt()){
+                    case 1:
+                        options.displayStudents();
+                        break;
+                    case 2:
+                        options.displayTeachers();
+                        break;
+                    case 3:
+                        options.displayClasses();
+                        break;
+                    case 4:
+                        options.displaySchedules();
+                }
                 break;
             case 6:
                 quit = -1;
