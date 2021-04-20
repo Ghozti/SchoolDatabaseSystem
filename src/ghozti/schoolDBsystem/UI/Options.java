@@ -8,6 +8,8 @@ import ghozti.schoolDBsystem.database.Teachers;
 import ghozti.schoolDBsystem.student.Student;
 import ghozti.schoolDBsystem.teacher.Teacher;
 import ghozti.schoolDBsystem.utils.IDmaker.IDmaker;
+import ghozti.schoolDBsystem.utils.algorithms.AlphabeticalSorter;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -123,5 +125,33 @@ public class Options {
         }catch (InputMismatchException e){
             System.out.println(Constants.Errors.inputError);
         }
+    }
+
+    public void displayStudents(){
+        Scanner scanner = new Scanner(System.in);
+        AlphabeticalSorter alphabeticalSorter = new AlphabeticalSorter();
+
+        System.out.println(Constants.Dialouge.sortAlphabetically.concat("[1] yes\n [2] no"));
+        try {
+            if (scanner.nextInt() == 1){
+                System.out.println(alphabeticalSorter.sort(Students.getStudents()));
+            }else {
+                System.out.println(Students.getStudents());
+            }
+        }catch (InputMismatchException e){
+
+        }
+    }
+
+    public void displayTeachers(){
+
+    }
+
+    public void displayClasses(){
+
+    }
+
+    public void displaySchedules(){
+
     }
 }

@@ -1,4 +1,4 @@
-package ghozti.schoolDBsystem.utils;
+package ghozti.schoolDBsystem.utils.algorithms;
 
 import ghozti.schoolDBsystem.student.Student;
 import java.util.ArrayList;

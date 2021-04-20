@@ -1,33 +1,33 @@
-package ghozti.schoolDBsystem.utils.DBgetters;
+package ghozti.schoolDBsystem.utils.algorithms.DBgetters;
 
 import ghozti.schoolDBsystem.classes.Class;
 import ghozti.schoolDBsystem.student.Student;
 import ghozti.schoolDBsystem.teacher.Teacher;
 import java.util.ArrayList;
 
-public class GetByName {
+public class GetByID {
 
-    public Student getByNameS(ArrayList<Student> studentArrayList, String target){
+    public Student getByIDS(ArrayList<Student> studentArrayList, String target){
         for (int i = 0; i < studentArrayList.size(); i++) {
-            if (target.equals(studentArrayList.get(i).getName())){
+            if (target.equals(studentArrayList.get(i).getID())){
                 return studentArrayList.get(i);
             }
         }
         return null;
     }
 
-    public Teacher getByNameT(ArrayList<Teacher> teacherArrayList, String target){
+    public Teacher getByIDT(ArrayList<Teacher> teacherArrayList, String target){
         for (int i = 0; i < teacherArrayList.size(); i++) {
-            if (target.equals(teacherArrayList.get(i).getName())){
+            if (target.equals(teacherArrayList.get(i).getID())){
                 return teacherArrayList.get(i);
             }
         }
         return null;
     }
 
-    public Class getByNameC(ArrayList<Class> classArrayList, String target){
+    public Class getByIDC(ArrayList<Class> classArrayList, String target){
         for (int i = 0; i < classArrayList.size(); i++) {
-            if (target.equals(classArrayList.get(i).getSubject())){
+            if (target.equals(classArrayList.get(i).getID())){
                 return classArrayList.get(i);
             }
         }
