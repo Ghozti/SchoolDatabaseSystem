@@ -1,4 +1,4 @@
-package ghozti.schoolDBsystem.utils.algorithms;
+package ghozti.schoolDBsystem.utils.algorithms.sorters;
 
 import ghozti.schoolDBsystem.student.Student;
 import ghozti.schoolDBsystem.teacher.Teacher;

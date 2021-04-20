@@ -8,7 +8,7 @@ import ghozti.schoolDBsystem.database.Teachers;
 import ghozti.schoolDBsystem.student.Student;
 import ghozti.schoolDBsystem.teacher.Teacher;
 import ghozti.schoolDBsystem.utils.IDmaker.IDmaker;
-import ghozti.schoolDBsystem.utils.algorithms.AlphabeticalSorter;
+import ghozti.schoolDBsystem.utils.algorithms.sorters.AlphabeticalSorter;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
