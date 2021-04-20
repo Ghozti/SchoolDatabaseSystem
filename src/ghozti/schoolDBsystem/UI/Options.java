@@ -135,7 +135,7 @@ public class Options {
         try {
             if (scanner.nextInt() == 1){
                 for (int i = 0; i < Students.getStudents().size(); i++){
-                    System.out.println(alphabeticalSorter.sort(Students.getStudents()).get(i).getName());
+                    System.out.println(alphabeticalSorter.sortS(Students.getStudents()).get(i).getName());
                 }
             }else {
                 for (Student i : Students.getStudents()){
