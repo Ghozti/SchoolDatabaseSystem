@@ -23,9 +23,7 @@ public class Displayer {
 
     public void displaySchedule(Schedule schedule){
         System.out.println("[Classes] ");
-        for (String i : schedule.getClasses()){
-            System.out.println(i);
-        }
+        for (String i : schedule.getClasses()) System.out.println(i);
         System.out.println("[ID] ".concat(schedule.getID()));
     }
 
