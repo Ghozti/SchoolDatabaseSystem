@@ -5,9 +5,10 @@ public class Teacher {
     private String name;
     private int age;
     private String birthDate;
-    private String ID;//ID
+    private String ID;
     private String subject;
 
+    //Constructor
     public Teacher(String name, int age, String birthDate, String ID, String subject){
         this.name = name;
         this.age = age;
@@ -16,6 +17,7 @@ public class Teacher {
         this.subject = subject;
     }
 
+    /**GETTERS**/
     public String getName(){
         return name;
     }
@@ -28,7 +30,6 @@ public class Teacher {
         return birthDate;
     }
 
-    //ID getter
     public String getID(){return ID;}
 
     public String getSubject(){

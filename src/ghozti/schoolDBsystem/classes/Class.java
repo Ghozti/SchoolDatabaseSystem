@@ -54,6 +54,8 @@ public class Class {
         return students.size();
     }
 
+
+    //TODO maybe implement this to the final product !
     //***STUDENT UTILS***/
     public void addStudent(Student student){//allows to add a student to the list
         students.add(student);
