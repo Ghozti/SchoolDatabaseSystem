@@ -1,8 +1,10 @@
 package ghozti.schoolDBsystem.utils.algorithms.sorters;
 
+import ghozti.schoolDBsystem.classes.Class;
 import ghozti.schoolDBsystem.student.Student;
 import ghozti.schoolDBsystem.teacher.Teacher;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class AlphabeticalSorter {
 
@@ -29,6 +31,18 @@ public class AlphabeticalSorter {
         for (int i = 96; i < 123; i++) {
             for (int j = 0; j < list.size(); j++) {
                 if (list.get(j).getName().toLowerCase().charAt(0) == i){
+                    nList.add(list.get(j));
+                }
+            }
+        }
+        return nList;
+    }
+
+    public ArrayList<Class> sortC(ArrayList<Class> list){
+        ArrayList<Class> nList = new ArrayList<>();
+        for (int i = 96; i < 123; i++) {
+            for (int j = 0; j < list.size(); j++) {
+                if (list.get(j).getSubject().toLowerCase().charAt(0) == i){
                     nList.add(list.get(j));
                 }
             }

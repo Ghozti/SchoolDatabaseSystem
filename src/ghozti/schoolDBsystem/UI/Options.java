@@ -156,7 +156,8 @@ public class Options {
                 }
             }//TODO add a "print full details" option
         }catch (InputMismatchException e){
-
+            System.out.println("***Invalid input***");
+            displayStudents();
         }
     }
 
