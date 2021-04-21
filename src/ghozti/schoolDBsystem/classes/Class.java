@@ -7,11 +7,12 @@ import java.util.ArrayList;
 public class Class {
 
     private String subject;//class subject name
-    private String ID;//class ID ***TESTING***
+    private String ID;//class ID
     private Teacher classTeacher;//name of class teacher
     private ArrayList<Student> students = new ArrayList<>();//array list containing student objects
     private int period;//class period number
 
+    //First constructor (does not take in a student list)
     public Class(String subject, String ID, Teacher teacher, int period){
         this.subject = subject;
         this.ID = ID;
@@ -19,6 +20,7 @@ public class Class {
         this.period = period;
     }
 
+    //Second constructor (takes in a student array list)
     public Class(String subject, String ID, Teacher teacher, int period, ArrayList<Student> studentList){
         this.subject = subject;
         this.ID = ID;

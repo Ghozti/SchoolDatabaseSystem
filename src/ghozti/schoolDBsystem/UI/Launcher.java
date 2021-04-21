@@ -9,6 +9,7 @@ public class Launcher {
         Options options = new Options();
         int quit = 0;
 
+        //user menu
         System.out.println("Enter what you wish to do: \n" +
                 "[1] Add a class\n" +
                 "[2] Add a schedule\n" +
@@ -17,6 +18,7 @@ public class Launcher {
                 "[5] other\n" +
                 "[6] quit");
 
+        //input handler
         switch (scanner.nextInt()){
             case 1:
                 options.createClass();

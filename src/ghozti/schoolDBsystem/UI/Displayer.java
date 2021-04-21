@@ -7,6 +7,11 @@ import ghozti.schoolDBsystem.teacher.Teacher;
 
 public class Displayer {
 
+    /**
+     * These methods will each display the different things stored in the DB (Student, Teacher, Class, Schedule)
+     * They will each display full details of a given object depending on what it is
+     */
+
     public void displayStudent(Student student){
         System.out.println("[Name] ".concat(student.getName()));
         System.out.println("[Age] ".concat(Integer.toString(student.getAge())));
