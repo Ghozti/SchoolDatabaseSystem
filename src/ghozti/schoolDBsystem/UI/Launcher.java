@@ -53,6 +53,7 @@ public class Launcher {
                 break;
         }
 
+        //if the user chooses option 6 then the program will stop
         if (quit == -1) return;
         else start();
     }

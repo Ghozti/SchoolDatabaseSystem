@@ -7,6 +7,13 @@ import java.util.ArrayList;
 
 public class RemoveByName {
 
+    /*
+     * These methods will be used to remove an object in the data base based on their name value.
+     * RemoveByNameS - used for students
+     * RemoveByNameT - used for teachers
+     * RemoveByNameC - used for classes
+     */
+
     public void removeByNameS(ArrayList<Student> list, String target) {
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).getName().equals(target)) {
@@ -25,6 +32,7 @@ public class RemoveByName {
         }
     }
 
+    //NOTE this method will remove the first class with the value of the target therefore it is not recommended to use unless the specified class is unique
     public void removeByNameC(ArrayList<Class> list, String target){
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).getID().equals(target)){
