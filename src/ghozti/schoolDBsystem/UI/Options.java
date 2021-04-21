@@ -13,6 +13,13 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Options {
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    /**
+     * these create methods are used for when the user wishes to add a new student, teacher, class , schedule.
+     * They each use a scanner for the user to input respected values.
+     * once every variable contains a value a new object will be created and added to the DB
+     */
 
     public void createClass(){
 
@@ -125,6 +132,13 @@ public class Options {
             System.out.println(Constants.Errors.inputError);
         }
     }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    /**
+     * these display methods will be used to display the objects in the DB. They will display the name of the object exclusively.
+     * The user has the choice to display the DB in an alphabetically sorted way.
+     * The difference between these methods and the ones in Displayer.java is that these display the entire array list in the DB
+     */
 
     public void displayStudents(){
         Scanner scanner = new Scanner(System.in);
