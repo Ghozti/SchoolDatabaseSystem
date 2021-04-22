@@ -162,11 +162,45 @@ public class Options {
     }
 
     public void displayTeachers(){
+        Scanner scanner = new Scanner(System.in);
+        AlphabeticalSorter alphabeticalSorter = new AlphabeticalSorter();
 
+        System.out.println(Constants.Dialouge.sortAlphabetically.concat("\n [1] yes\n [2] no"));
+        try {
+            if (scanner.nextInt() == 1){
+                for (int i = 0; i < Teachers.getTeachers().size(); i++){
+                    System.out.println(alphabeticalSorter.sortT(Teachers.getTeachers()).get(i).getName());
+                }
+            }else {
+                for (Teacher i : Teachers.getTeachers()){
+                    System.out.println(i.getName());
+                }
+            }//TODO add a "print full details" option
+        }catch (InputMismatchException e){
+            System.out.println("***Invalid input***");
+            displayStudents();
+        }
     }
 
     public void displayClasses(){
+        Scanner scanner = new Scanner(System.in);
+        AlphabeticalSorter alphabeticalSorter = new AlphabeticalSorter();
 
+        System.out.println(Constants.Dialouge.sortAlphabetically.concat("\n [1] yes\n [2] no"));
+        try {
+            if (scanner.nextInt() == 1){
+                for (int i = 0; i < Classes.getClasses().size(); i++){
+                    System.out.println(alphabeticalSorter.sortC(Classes.getClasses()).get(i).getSubject());
+                }
+            }else {
+                for (Class i : Classes.getClasses()){
+                    System.out.println(i.getSubject());
+                }
+            }//TODO add a "print full details" option
+        }catch (InputMismatchException e){
+            System.out.println("***Invalid input***");
+            displayStudents();
+        }
     }
 
     public void displaySchedules(){
