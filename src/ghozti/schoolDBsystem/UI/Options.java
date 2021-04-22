@@ -151,10 +151,10 @@ public class Options {
                     System.out.println(alphabeticalSorter.sortS(Students.getStudents()).get(i).getName());
                 }
             }else {
-                for (Student i : Students.getStudents()){
-                    System.out.println(i.getName());
+                for (int i = 0; i < Students.getStudents().size(); i++){
+                    System.out.println("[".concat(String.valueOf(i).concat("] ")).concat(Students.getStudents().get(i).getName()));
                 }
-            }//TODO add a "print full details" option
+            }
         }catch (InputMismatchException e){
             System.out.println("***Invalid input***");
             displayStudents();
@@ -172,8 +172,8 @@ public class Options {
                     System.out.println(alphabeticalSorter.sortT(Teachers.getTeachers()).get(i).getName());
                 }
             }else {
-                for (Teacher i : Teachers.getTeachers()){
-                    System.out.println(i.getName());
+                for (int i = 0; i < Teachers.getTeachers().size(); i++){
+                    System.out.println("[".concat(String.valueOf(i).concat("] ")).concat(Teachers.getTeachers().get(i).getName()));
                 }
             }//TODO add a "print full details" option
         }catch (InputMismatchException e){
@@ -193,8 +193,8 @@ public class Options {
                     System.out.println(alphabeticalSorter.sortC(Classes.getClasses()).get(i).getSubject());
                 }
             }else {
-                for (Class i : Classes.getClasses()){
-                    System.out.println(i.getSubject());
+                for (int i = 0; i < Classes.getClasses().size(); i++){
+                    System.out.println("[".concat(String.valueOf(i).concat("] ")).concat(Classes.getClasses().get(i).getSubject()));
                 }
             }//TODO add a "print full details" option
         }catch (InputMismatchException e){
@@ -204,6 +204,6 @@ public class Options {
     }
 
     public void displaySchedules(){
-
+        //TODO figure this out^
     }
 }

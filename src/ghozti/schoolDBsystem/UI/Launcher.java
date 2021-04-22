@@ -1,5 +1,8 @@
 package ghozti.schoolDBsystem.UI;
 
+import ghozti.schoolDBsystem.constants.Constants;
+
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Launcher {
@@ -18,39 +21,65 @@ public class Launcher {
                 "[5] other\n" +
                 "[6] quit");
 
-        //input handler
-        switch (scanner.nextInt()){
-            case 1:
-                options.createClass();
-                break;
-            case 2:
-                options.createSchedule();
-                break;
-            case 3:
-                options.createTeacher();
-                break;
-            case 4:
-                options.createStudent();
-                break;
-            case 5:
-                System.out.println(" [1] Print students\n [2] Print Teachers\n [3] Print classes \n [4] Print schedules");
-                switch (scanner.nextInt()){
-                    case 1:
-                        options.displayStudents();
-                        break;
-                    case 2:
-                        options.displayTeachers();
-                        break;
-                    case 3:
-                        options.displayClasses();
-                        break;
-                    case 4:
-                        options.displaySchedules();
-                }
-                break;
-            case 6:
-                quit = -1;
-                break;
+        try {
+            //input handler
+            switch (scanner.nextInt()) {
+                case 1:
+                    options.createClass();
+                    break;
+                case 2:
+                    options.createSchedule();
+                    break;
+                case 3:
+                    options.createTeacher();
+                    break;
+                case 4:
+                    options.createStudent();
+                    break;
+                case 5:
+                    System.out.println(" [1] Print students\n [2] Print Teachers\n [3] Print classes \n [4] Print schedules \n [5] Scope");
+                    switch (scanner.nextInt()) {
+                        case 1:
+                            options.displayStudents();
+                            break;
+                        case 2:
+                            options.displayTeachers();
+                            break;
+                        case 3:
+                            options.displayClasses();
+                            break;
+                        case 4:
+                            options.displaySchedules();
+                            break;
+                        case 5:
+                            System.out.println("[1] Students \n [2] Teachers \n [3] Classes \n [4] Schedules");
+                            switch (scanner.nextInt()){
+                                case 1:
+                                    options.displayStudents();
+                                    System.out.println("Enter the index of the object you wish to scope: ");
+                                    break;
+                                case 2:
+                                    options.displayTeachers();
+                                    System.out.println("Enter the index of the object you wish to scope: ");
+                                    break;
+                                case 3:
+                                    options.displayClasses();
+                                    System.out.println("Enter the index of the object you wish to scope: ");
+                                    break;
+                                case 4:
+                                    options.displaySchedules();
+                                    System.out.println("Enter the index of the object you wish to scope: ");
+                                    break;
+                            }//TODO work on the scope prototype
+                    }
+                    break;
+                case 6:
+                    quit = -1;
+                    break;
+            }
+        }catch (InputMismatchException e){
+            System.out.println(Constants.Errors.inputError);
+            start();
         }
 
         //if the user chooses option 6 then the program will stop
