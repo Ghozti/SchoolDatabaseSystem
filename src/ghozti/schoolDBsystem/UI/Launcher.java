@@ -1,7 +1,6 @@
 package ghozti.schoolDBsystem.UI;
 
 import ghozti.schoolDBsystem.constants.Constants;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -55,22 +54,42 @@ public class Launcher {
                             System.out.println("[1] Students \n [2] Teachers \n [3] Classes \n [4] Schedules");
                             switch (scanner.nextInt()){
                                 case 1:
-                                    options.displayStudents();
-                                    System.out.println("Enter the index of the object you wish to scope: ");
+                                    System.out.println("[1] By name \n [2] by ID");
+                                    switch (scanner.nextInt()){
+                                        case 1:
+                                            break;
+                                        case 2:
+                                            break;
+                                    }
                                     break;
                                 case 2:
-                                    options.displayTeachers();
-                                    System.out.println("Enter the index of the object you wish to scope: ");
+                                    System.out.println("[1] By name \n [2] by ID");
+                                    switch (scanner.nextInt()){
+                                        case 1:
+                                            break;
+                                        case 2:
+                                            break;
+                                    }
                                     break;
                                 case 3:
-                                    options.displayClasses();
-                                    System.out.println("Enter the index of the object you wish to scope: ");
+                                    System.out.println("[1] By name \n [2] by ID");
+                                    switch (scanner.nextInt()){
+                                        case 1:
+                                            break;
+                                        case 2:
+                                            break;
+                                    }
                                     break;
                                 case 4:
-                                    options.displaySchedules();
-                                    System.out.println("Enter the index of the object you wish to scope: ");
+                                    System.out.println("[1] By name \n [2] by ID");
+                                    switch (scanner.nextInt()){
+                                        case 1:
+                                            break;
+                                        case 2:
+                                            break;
+                                    }
                                     break;
-                            }//TODO work on the scope prototype
+                            }
                     }
                     break;
                 case 6:
