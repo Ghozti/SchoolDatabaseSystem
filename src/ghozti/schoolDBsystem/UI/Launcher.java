@@ -1,6 +1,11 @@
 package ghozti.schoolDBsystem.UI;
 
 import ghozti.schoolDBsystem.constants.Constants;
+import ghozti.schoolDBsystem.database.Students;
+import ghozti.schoolDBsystem.utils.algorithms.DBgetters.GetByID;
+import ghozti.schoolDBsystem.utils.algorithms.DBgetters.GetByName;
+import ghozti.schoolDBsystem.utils.algorithms.sorters.AlphabeticalSorter;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -9,6 +14,9 @@ public class Launcher {
     public void start(){
         Scanner scanner = new Scanner(System.in);
         Options options = new Options();
+        GetByName getByName = new GetByName();
+        Displayer displayer = new Displayer();
+        GetByID getByID = new GetByID();
         int quit = 0;
 
         //user menu
@@ -57,8 +65,12 @@ public class Launcher {
                                     System.out.println("[1] By name \n [2] by ID");
                                     switch (scanner.nextInt()){
                                         case 1:
+                                            System.out.println(Constants.Dialouge.setname);
+                                            displayer.displayStudent(getByName.getByNameS(Students.getStudents(),scanner.nextLine()));
                                             break;
                                         case 2:
+                                            System.out.println("enter an ID: ");//TODO make this a constant
+                                            displayer.displayStudent(getByID.getByIDS(Students.getStudents(),scanner.nextLine()));
                                             break;
                                     }
                                     break;
