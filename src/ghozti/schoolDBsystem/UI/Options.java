@@ -148,7 +148,7 @@ public class Options {
         try {
             if (scanner.nextInt() == 1){
                 for (int i = 0; i < Students.getStudents().size(); i++){
-                    System.out.println(alphabeticalSorter.sortS(Students.getStudents()).get(i).getName());
+                    System.out.println("[".concat(String.valueOf(i).concat("] ")).concat(alphabeticalSorter.sortS(Students.getStudents()).get(i).getName()));
                 }
             }else {
                 for (int i = 0; i < Students.getStudents().size(); i++){
@@ -169,7 +169,7 @@ public class Options {
         try {
             if (scanner.nextInt() == 1){
                 for (int i = 0; i < Teachers.getTeachers().size(); i++){
-                    System.out.println(alphabeticalSorter.sortT(Teachers.getTeachers()).get(i).getName());
+                    System.out.println("[".concat(String.valueOf(i).concat("] ")).concat(alphabeticalSorter.sortT(Teachers.getTeachers()).get(i).getName()));
                 }
             }else {
                 for (int i = 0; i < Teachers.getTeachers().size(); i++){
@@ -190,7 +190,7 @@ public class Options {
         try {
             if (scanner.nextInt() == 1){
                 for (int i = 0; i < Classes.getClasses().size(); i++){
-                    System.out.println(alphabeticalSorter.sortC(Classes.getClasses()).get(i).getSubject());
+                    System.out.println("[".concat(String.valueOf(i).concat("] ")).concat(alphabeticalSorter.sortC(Classes.getClasses()).get(i).getSubject()));
                 }
             }else {
                 for (int i = 0; i < Classes.getClasses().size(); i++){

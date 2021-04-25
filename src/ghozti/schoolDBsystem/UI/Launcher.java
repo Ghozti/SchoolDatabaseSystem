@@ -1,11 +1,11 @@
 package ghozti.schoolDBsystem.UI;
 
 import ghozti.schoolDBsystem.constants.Constants;
+import ghozti.schoolDBsystem.database.Classes;
 import ghozti.schoolDBsystem.database.Students;
+import ghozti.schoolDBsystem.database.Teachers;
 import ghozti.schoolDBsystem.utils.algorithms.DBgetters.GetByID;
 import ghozti.schoolDBsystem.utils.algorithms.DBgetters.GetByName;
-import ghozti.schoolDBsystem.utils.algorithms.sorters.AlphabeticalSorter;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -73,7 +73,7 @@ public class Launcher {
                                         case 2:
                                             System.out.println("enter an ID: ");//TODO make this a constant
                                             String ID = scanner1.nextLine();
-                                            //displayer.displayStudent(getByID.getByIDS(Students.getStudents(),ID));
+                                            displayer.displayStudent(getByID.getByIDS(Students.getStudents(),ID));
                                             break;
                                     }
                                     break;
@@ -81,8 +81,14 @@ public class Launcher {
                                     System.out.println("[1] By name \n [2] by ID");
                                     switch (scanner.nextInt()){
                                         case 1:
+                                            System.out.println(Constants.Dialouge.setname);
+                                            String name = scanner1.nextLine();
+                                            displayer.displayTeacher(getByName.getByNameT(Teachers.getTeachers(),name));
                                             break;
                                         case 2:
+                                            System.out.println("enter an ID: ");//TODO make this a constant
+                                            String ID = scanner1.nextLine();
+                                            displayer.displayStudent(getByID.getByIDS(Students.getStudents(),ID));
                                             break;
                                     }
                                     break;
@@ -90,12 +96,18 @@ public class Launcher {
                                     System.out.println("[1] By name \n [2] by ID");
                                     switch (scanner.nextInt()){
                                         case 1:
+                                            System.out.println(Constants.Dialouge.setname);
+                                            String name = scanner1.nextLine();
+                                            displayer.displayClass(getByName.getByNameC(Classes.getClasses(),name));
                                             break;
                                         case 2:
+                                            System.out.println("enter an ID: ");//TODO make this a constant
+                                            String ID = scanner1.nextLine();
+                                            displayer.displayClass(getByID.getByIDC(Classes.getClasses(),ID));
                                             break;
                                     }
                                     break;
-                                case 4:
+                                case 4://TODO work on schedules
                                     System.out.println("[1] By name \n [2] by ID");
                                     switch (scanner.nextInt()){
                                         case 1:
