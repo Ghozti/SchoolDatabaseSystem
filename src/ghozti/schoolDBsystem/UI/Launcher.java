@@ -71,7 +71,7 @@ public class Launcher {
                                             displayer.displayStudent(getByName.getByNameS(Students.getStudents(),name));
                                             break;//TODO make the alphabetical sorted display display index.
                                         case 2:
-                                            System.out.println("enter an ID: ");//TODO make this a constant
+                                            System.out.println(Constants.Dialouge.setID);
                                             String ID = scanner1.nextLine();
                                             displayer.displayStudent(getByID.getByIDS(Students.getStudents(),ID));
                                             break;
@@ -86,7 +86,7 @@ public class Launcher {
                                             displayer.displayTeacher(getByName.getByNameT(Teachers.getTeachers(),name));
                                             break;
                                         case 2:
-                                            System.out.println("enter an ID: ");//TODO make this a constant
+                                            System.out.println(Constants.Dialouge.setID);
                                             String ID = scanner1.nextLine();
                                             displayer.displayStudent(getByID.getByIDS(Students.getStudents(),ID));
                                             break;
@@ -101,7 +101,7 @@ public class Launcher {
                                             displayer.displayClass(getByName.getByNameC(Classes.getClasses(),name));
                                             break;
                                         case 2:
-                                            System.out.println("enter an ID: ");//TODO make this a constant
+                                            System.out.println(Constants.Dialouge.setID);
                                             String ID = scanner1.nextLine();
                                             displayer.displayClass(getByID.getByIDC(Classes.getClasses(),ID));
                                             break;

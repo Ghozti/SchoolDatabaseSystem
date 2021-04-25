@@ -12,6 +12,7 @@ public class Constants {
         public static final String setClassPeriod = "Enter a class period: ";
         public static final String addedToDB = "Added to database";
         public static final String sortAlphabetically = "Sort alphabetically?";
+        public static final String setID = "Enter an ID";
     }
 
     public static class Values extends Constants{
