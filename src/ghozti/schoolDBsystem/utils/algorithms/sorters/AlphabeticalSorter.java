@@ -4,7 +4,6 @@ import ghozti.schoolDBsystem.classes.Class;
 import ghozti.schoolDBsystem.student.Student;
 import ghozti.schoolDBsystem.teacher.Teacher;
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class AlphabeticalSorter {
 

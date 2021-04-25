@@ -59,18 +59,21 @@ public class Launcher {
                             options.displaySchedules();
                             break;
                         case 5:
-                            System.out.println("[1] Students \n [2] Teachers \n [3] Classes \n [4] Schedules");
+                            System.out.println(" [1] Students \n [2] Teachers \n [3] Classes \n [4] Schedules");
                             switch (scanner.nextInt()){
                                 case 1:
-                                    System.out.println("[1] By name \n [2] by ID");
+                                    System.out.println(" [1] By name \n [2] by ID");
+                                    Scanner scanner1 = new Scanner(System.in);
                                     switch (scanner.nextInt()){
                                         case 1:
                                             System.out.println(Constants.Dialouge.setname);
-                                            displayer.displayStudent(getByName.getByNameS(Students.getStudents(),scanner.nextLine()));
-                                            break;
+                                            String name = scanner1.nextLine();
+                                            displayer.displayStudent(getByName.getByNameS(Students.getStudents(),name));
+                                            break;//TODO make the alphabetical sorted display display index.
                                         case 2:
                                             System.out.println("enter an ID: ");//TODO make this a constant
-                                            displayer.displayStudent(getByID.getByIDS(Students.getStudents(),scanner.nextLine()));
+                                            String ID = scanner1.nextLine();
+                                            //displayer.displayStudent(getByID.getByIDS(Students.getStudents(),ID));
                                             break;
                                     }
                                     break;
