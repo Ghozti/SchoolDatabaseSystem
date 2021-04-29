@@ -1,5 +1,7 @@
 package ghozti.schoolDBsystem.student;
 
+import ghozti.schoolDBsystem.schedule.Schedule;
+
 public class Student {
 
     private String name;//name of student
@@ -7,6 +9,7 @@ public class Student {
     private String birthDate;//birthdate of student
     private String ID;//ID
     private double GPA;//GPA of student
+    private Schedule schedule;
 
     //constructor #1 will allow the user to set the fields except GPA
     public Student(String name,int age, String birthDate,String ID){
@@ -23,6 +26,10 @@ public class Student {
         this.birthDate = birthDate;
         this.ID = ID;
         this.GPA = GPA;
+    }
+
+    public void setSchedule(Schedule e){
+        schedule = e;
     }
 
     //name getter
@@ -46,5 +53,10 @@ public class Student {
     //GPA getter
     public double getGPA(){
         return GPA;
+    }
+
+    //schedule getter
+    public Schedule getSchedule(){
+        return schedule;
     }
 }
